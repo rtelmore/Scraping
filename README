@@ -1,0 +1,26 @@
+I'm working on a performance comparison of XML library in R vs using
+ Beautifulsoup in Python for web scraping.  The on-going analysis can be found
+ at thelogcabin.wordpress.com.
+
+COPYRIGHT
+---------
+All works are have the following copyright:
+Copyright (C) 2010
+Ryan Elmore <rtelmore@gmail.com>
+@rtelmore
+
+LICENSE
+-------
+The workshop source code and lecture materials are distributed under different 
+ licenses. 
+
+All source code is licensed under the Simplified BSD License: 
+ http://www.opensource.org/licenses/bsd-license.php.  
+
+All material other than source code (slides, handouts, etc.) are licensed under
+ the Creative Commons Attribution-Share Alike 3.0 United States License:
+ http://creativecommons.org/licenses/by-sa/3.0/us/.
+
+CONTACT
+-------
+Ryan Elmore    rtelmore@gmail.com 
