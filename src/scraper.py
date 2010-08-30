@@ -56,8 +56,10 @@ def process_mls_soup(soup):
     return team_data
 
 if __name__ == '__main__':
+    print time.ctime() + ' -- Starting'
+    
     outfile = \
-        '/Users/relmore/Side_Projects/Sports/Scrape/data/py_%s.csv' \
+        '/Users/relmore/Side_Projects/Sports/Scraping/data/py_%s.csv' \
         % date.today().strftime('%Y%m%d')
     f = open(outfile,'a')
   
@@ -67,5 +69,8 @@ if __name__ == '__main__':
         data = process_mls_soup(soup)
         for team in data.keys():
             out_list.append('%s; %s; '%(team, year) + '; '.join(data[team]))
+        print time.ctime() + ' -- Year: %s' % year
+
     f.write('\n'.join(out_list) + '\n')
     f.close()
+    print time.ctime() + ' -- Finished :)'
