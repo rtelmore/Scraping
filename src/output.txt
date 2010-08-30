@@ -1,0 +1,26 @@
+## Ryan Elmore
+## 29 Aug 2010
+## Output notes	
+
+## From system call to python:
+Sun Aug 29 18:07:57 2010 -- Starting
+Sun Aug 29 18:08:00 2010 -- Year: 2005
+Sun Aug 29 18:08:02 2010 -- Year: 2006
+Sun Aug 29 18:08:04 2010 -- Year: 2007
+Sun Aug 29 18:08:06 2010 -- Year: 2008
+Sun Aug 29 18:08:08 2010 -- Year: 2009
+Sun Aug 29 18:08:08 2010 -- Finished :)
+   user  system elapsed 
+  2.405   0.220  11.511 
+
+
+## From R
+[1] "2010-08-29 18:10:29 -- Starting"
+[1] "2010-08-29 18:10:29 -- Year: 2005"
+[1] "2010-08-29 18:10:29 -- Year: 2006"
+[1] "2010-08-29 18:10:29 -- Year: 2007"
+[1] "2010-08-29 18:10:30 -- Year: 2008"
+[1] "2010-08-29 18:10:30 -- Year: 2009"
+[1] "2010-08-29 18:10:30 -- Finished :)"
+   user  system elapsed 
+  0.384   0.016   1.105 
