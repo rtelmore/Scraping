@@ -7,35 +7,29 @@
 ##      http://www.opensource.org/licenses/bsd-license.php
 ## All rights reserved.                      
 
-## I don't even know what that means, but other repositories tend to
-##  have something similar (if not exact -- Thanks Drew Conway)! 
-
 wd.path <- "~/Side_Projects/Sports/Scraping/"
 
 ## Dependencies:
 source(paste(wd.path, "src/load.R", sep = ""))
 
   
+r.scrape <- system.time(source(paste(wd.path, "src/scrape.R", sep = "")))
 py.scrape <- system.time(
                system("python ~/Side_Projects/Sports/Scraping/src/scraper.py"))
-r.scrape <- system.time(source(paste(wd.path, "src/scrape.R", sep = "")))
 
 type <- c(rep("python", 5), rep("R", 5))
 timing <- rep(names(py.scrape), 2)
-values <- as.numeric(round(c(py.scrape, r.scrape), 4))
 
-df.scrape <- data.frame(cbind(type, timing, values))
+df.scrape <- data.frame(type = type, timing = timing, values = values)
 
-p <- ggplot(data = df.scrape, aes(x = timing, y = values, 
+p <- ggplot(data = df.scrape, aes(x = timing, y = as.numeric(values), 
                                   group = type, colour = type)) 
 
-p + geom_line(lty = 3) + 
+p + geom_line(lty = 2) + 
   geom_point(colour="grey60", size = 4) +
   geom_point(aes(colour = type)) +
   scale_x_discrete("timed category") +
+  scale_y_continuous("time (in sec)", limits = c(0, 3)) +
   scale_colour_manual("language", values = c("forestgreen", "darkred"))
 
-  
-ggplot(data = df.scrape, aes(x = timing, y = values, fill = color)) +
-  geom_bar(position = "dodge") + 
-  scale_colour_identity(labels=levels(df.scrape$type), grob="bar", name="color") 
+ggsave(file = paste(wd.path, "fig/time.png", sep = ""), hei = 7, wid = 7)

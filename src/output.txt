@@ -2,6 +2,22 @@
 ## 29 Aug 2010
 ## Output notes	
 
+Tue Aug 31 09:10:13 2010 -- Starting
+Tue Aug 31 09:10:15 2010 -- Year: 2005
+Tue Aug 31 09:10:18 2010 -- Year: 2006
+Tue Aug 31 09:10:20 2010 -- Year: 2007
+Tue Aug 31 09:10:22 2010 -- Year: 2008
+Tue Aug 31 09:10:23 2010 -- Year: 2009
+Tue Aug 31 09:10:23 2010 -- Finished :)
+> r.scrape <- system.time(source(paste(wd.path, "src/scrape.R", sep = "")))
+[1] "2010-08-31 09:10:24 -- Starting"
+[1] "2010-08-31 09:10:25 -- Year: 2005"
+[1] "2010-08-31 09:10:26 -- Year: 2006"
+[1] "2010-08-31 09:10:28 -- Year: 2007"
+[1] "2010-08-31 09:10:29 -- Year: 2008"
+[1] "2010-08-31 09:10:30 -- Year: 2009"
+[1] "2010-08-31 09:10:30 -- Finished :)"
+
 ## From system call to python:
 Sun Aug 29 18:07:57 2010 -- Starting
 Sun Aug 29 18:08:00 2010 -- Year: 2005
